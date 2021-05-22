@@ -1,0 +1,22 @@
+{
+  "name": "weiixu-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/weiixu-cli.js",
+  "bin": {
+    "we": "./bin/weiixu-cli.js",
+    "weiixu": "./bin/weiixu-cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "weiixu",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^7.2.0",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "shx": "^0.3.3"
+  }
+}
