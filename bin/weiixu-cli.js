@@ -59,13 +59,15 @@ program
   .option('-p, --path <path>', 'Enter you path, default ./') // option命令，不限数量
   .option('--url <url>', 'Enter you url')
   .option('--label <label>', 'Enter you label')
+  .option('--username <username>', 'Enter you username')
+  .option('--password <password>', 'Enter you password')
   .action((jira, destination) => {
     // console.log('jira自动任务', label, destination)
     const { jiraPath, jiraUrl, jiraLabel } = defaultOptions
-    const { path, url, label } = destination
-    const cmd = `node ${path || jiraPath} url=${url || jiraUrl} label=${
-      jiraLabel || label
-    }`
+    const { path, url, label, username, password } = destination
+    const cmd = `node ${
+      path || jiraPath
+    } url=${url} label=${label} username=${username} password=${password}`
     shell.exec(cmd)
   })
 
